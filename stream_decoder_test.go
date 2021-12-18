@@ -8,8 +8,8 @@ import (
 )
 
 func TestStreamDecoder(t *testing.T) {
-	reader, _ := os.Open("data/Customer.json")
-	decoder := json.NewDecoder(reader)
+	reader, _ := os.Open("data/Customer.json") // get json file
+	decoder := json.NewDecoder(reader)         // read data
 
 	// like json.unmarshal
 	customer := &Customer{}
