@@ -17,3 +17,14 @@ func TestStreamDecoder(t *testing.T) {
 
 	fmt.Println(customer)
 }
+
+func TestStreamDecoder2(t *testing.T) {
+	reader, _ := os.Open("data/Product.json") // get json file
+	decoder := json.NewDecoder(reader)        // read data
+
+	// like json.unmarshal
+	product := &Product{}
+	decoder.Decode(product)
+
+	fmt.Println(product)
+}
