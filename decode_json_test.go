@@ -16,6 +16,7 @@ func TestDecode(t *testing.T) {
 	// create object from struct
 	customer := &Customer{}
 
+	// read data json to go type data
 	err := json.Unmarshal(jsonBytes, customer)
 	if err != nil {
 		panic(err)

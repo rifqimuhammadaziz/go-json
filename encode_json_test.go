@@ -7,6 +7,7 @@ import (
 )
 
 func logJson(data interface{}) {
+	// encode to json
 	bytes, err := json.Marshal(data)
 	if err != nil {
 		panic(err)
